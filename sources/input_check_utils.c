@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 13:25:28 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/18 15:11:43 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/18 17:09:22 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,12 @@ int	nbstr_cmp(const char *s1, const char *s2)
 	int	j;
 
 	i = 0;
-	j = i;
-	if (s1[i] == '+')
-	{
-		if (s2[j] != '+')
-			i++;
-	}
+	j = 0;
+	
+	int	nb_s1 = ft_atoi(s1);
+	int	nb_s2 = ft_atoi(s2);
+	if (nb_s1 == nb_s2)
+		return (0);
 	else
-	{
-		if (s2[j] == '+')
-			j++;
-	}
-	while (s1[i] != '\0' && s2[j] != '\0' && s1[i] == s2[j])
-	{
-		i++;
-		j++;
-	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[j]);
+		return (1);
 }
