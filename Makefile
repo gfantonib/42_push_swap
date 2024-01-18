@@ -12,7 +12,7 @@ NAME = push_swap
 
 CFLAGS	= -Wextra -Wall -Werror -g
 
-HEADERS	= -Iincludes
+HEADERS	= -I ./includes/
 
 MK = mkdir -p
 

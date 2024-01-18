@@ -6,11 +6,11 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 14:26:12 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/18 15:12:06 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/18 17:39:13 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 t_stack	*get_stack_bottom(t_stack *stack)
 {

@@ -6,11 +6,11 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 16:26:29 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/18 15:11:37 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/18 17:38:33 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 static void	do_rev_rotate_both(t_stack **a, t_stack **b,
 												int *cost_a, int *cost_b)

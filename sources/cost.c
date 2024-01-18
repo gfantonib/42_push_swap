@@ -6,11 +6,11 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 16:09:18 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/18 15:11:34 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/18 17:38:09 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 void	get_cost(t_stack **stack_a, t_stack **stack_b)
 {
