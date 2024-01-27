@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_bst_node.c                                   :+:      :+:    :+:   */
+/*   check_node.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:25:54 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/01/26 16:31:21 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/27 10:51:33 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 // direction of the travesal.  If ever a key is out of range, we return 
 // false, and if we encounter leaf nodes (or an empty tree) we return true, 
 // and by continually "and-ing" the results we're able to verify the structure.
-bool	verifyBST(t_bst *node, int minkey, int maxkey) 
+bool	bst_verify(t_bst *node, int minkey, int maxkey) 
 {
     if (node == NULL)
 		return (true);
     if (node->key < minkey || node->key > maxkey) 
 		return (false);    
-    return (verifyBST(node->left_child, minkey, node->key - 1) && verifyBST(node->right_child, node->key + 1, maxkey));
+    return (bst_verify(node->left_child, minkey, node->key - 1) && bst_verify(node->right_child, node->key + 1, maxkey));
 }
 
 
@@ -33,23 +33,23 @@ bool	verifyBST(t_bst *node, int minkey, int maxkey)
 // the tree until it finds where the node "should" be either because it finds 
 // the node with that key, or it finds a NULL (either an empty list, or an 
 // empty left or child child pointer).
-bool	is_member(t_bst *node, int find_key)
+bool	bst_is_member(t_bst *node, int find_key)
 {
 	if (node == NULL)
 		return (false);
 	else if (find_key > node->key)
-		return (is_member(node->right_child, find_key));
+		return (bst_is_member(node->right_child, find_key));
 	else if (find_key < node->key)
-		return (is_member(node->left_child, find_key));
+		return (bst_is_member(node->left_child, find_key));
 	else 
 		return (true);
 }
 
 // Returns the total number of nodes in a BST
-int	num_nodes(t_bst *node)
+int	bst_num_nodes(t_bst *node)
 {
 	if (node == NULL) 
 		return (0);
 	else
-		return (1 + num_nodes(node->right_child) + num_nodes(node->left_child));
+		return (1 + bst_num_nodes(node->right_child) + bst_num_nodes(node->left_child));
 }

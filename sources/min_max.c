@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:20:43 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/01/26 16:42:07 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/27 10:49:05 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // Finds the minimum by repeatedly traversing the left subtree until we cannot
 // anymore. 
-int	find_minimum(t_bst *node)
+int	bst_find_minimum(t_bst *node)
 {
 	// Handles an empty BST with a printf and returning INT_MIN... this isn't the 
 	// only way we could handle this, but this is one acceptable way.
@@ -26,12 +26,12 @@ int	find_minimum(t_bst *node)
 	if (node->left_child == NULL)
 		return (node->key);
 	else
-		return (find_minimum(node->left_child));
+		return (bst_find_minimum(node->left_child));
 }
 
 // Finds the maximum by repeatedly traversing the right subtree until we cannot
 // anymore. 
-int	find_maximum(t_bst *node)
+int	bst_find_maximum(t_bst *node)
 {
 	// Handles an empty BST with a printf and returning INT_MAX... this isn't the 
 	// only way we could handle this, but this is one acceptable way.  
@@ -43,5 +43,5 @@ int	find_maximum(t_bst *node)
 	if (node->right_child == NULL)
 		return (node->key);
 	else
-		return (find_maximum(node->right_child));
+		return (bst_find_maximum(node->right_child));
 }
