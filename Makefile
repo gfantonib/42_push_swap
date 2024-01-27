@@ -14,6 +14,8 @@ SRCS	= \
 			check_node.c \
 			min_max.c \
 			traversal.c \
+			breadth.c \
+			del_utils.c
 
 OBJECTS_PATH = objects
 

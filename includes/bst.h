@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:17:51 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/01/27 10:53:27 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/27 12:40:08 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,10 @@ void bst_reverse_in_order(t_bst *node);
 void bst_post_order(t_bst *node);
 int bst_num_nodes(t_bst *node);
 void bst_breadth_first(t_bst *node);
+
+t_bst	*left_right_child_null(t_bst *node, bool *was_deleted);
+t_bst	*left_child_null(t_bst *node, bool *was_deleted);
+t_bst	*right_child_null(t_bst *node, bool *was_deleted);
+t_bst	*left_right_child(t_bst *node, bool *was_deleted);
 
 #endif
