@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input_check_utils.c                                :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/25 13:25:28 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/29 11:27:07 by gfantoni         ###   ########.fr       */
+/*   Created: 2023/07/26 10:32:18 by gfantoni          #+#    #+#             */
+/*   Updated: 2024/01/29 09:58:19 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "functions.h"
 
-int	is_digit(char c)
+char	*ft_strchr(const char *s, int c)
 {
-	return (c >= '0' && c <= '9');
-}
-
-int	is_sign(char c)
-{
-	return (c == '+' || c == '-');
-}
-
-int	nbstr_cmp(const char *s1, const char *s2)
-{
-	int	i;
-	int	j;
+	unsigned int		i;
 
 	i = 0;
-	j = 0;
-	
-	int	nb_s1 = ft_long_atoi(s1);
-	int	nb_s2 = ft_long_atoi(s2);
-	if (nb_s1 == nb_s2)
-		return (0);
-	else
-		return (1);
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i++;
+	}
+	if (s[i] == (char)c)
+		return ((char *)&s[i]);
+	return (NULL);
 }

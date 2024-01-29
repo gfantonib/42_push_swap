@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input_check_utils.c                                :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/25 13:25:28 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/29 11:27:07 by gfantoni         ###   ########.fr       */
+/*   Created: 2023/07/26 15:21:40 by gfantoni          #+#    #+#             */
+/*   Updated: 2024/01/29 09:58:19 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "functions.h"
 
-int	is_digit(char c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	return (c >= '0' && c <= '9');
-}
+	unsigned int	z;
 
-int	is_sign(char c)
-{
-	return (c == '+' || c == '-');
-}
-
-int	nbstr_cmp(const char *s1, const char *s2)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	
-	int	nb_s1 = ft_long_atoi(s1);
-	int	nb_s2 = ft_long_atoi(s2);
-	if (nb_s1 == nb_s2)
-		return (0);
-	else
-		return (1);
+	z = 0;
+	while ((s1[z] != '\0' || s2[z] != '\0') && n--)
+	{
+		if (s1[z] != s2[z])
+			return ((unsigned char)s1[z] - (unsigned char)s2[z]);
+		z++;
+	}
+	return (0);
 }

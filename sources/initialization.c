@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 14:44:42 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/18 17:38:36 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:27:13 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_stack	*fill_stack_values(int ac, char **av)
 	i = 1;
 	while (i < ac)
 	{
-		nb = ft_atoi(av[i]);
+		nb = ft_long_atoi(av[i]);
 		if (nb > INT_MAX || nb < INT_MIN)
 			exit_error(&stack_a, NULL);
 		if (i == 1)

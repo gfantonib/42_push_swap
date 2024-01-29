@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input_check_utils.c                                :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/25 13:25:28 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/29 11:27:07 by gfantoni         ###   ########.fr       */
+/*   Created: 2023/07/27 12:18:28 by gfantoni          #+#    #+#             */
+/*   Updated: 2024/01/29 11:27:29 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "functions.h"
 
-int	is_digit(char c)
-{
-	return (c >= '0' && c <= '9');
-}
-
-int	is_sign(char c)
-{
-	return (c == '+' || c == '-');
-}
-
-int	nbstr_cmp(const char *s1, const char *s2)
+int	ft_atoi(const char *str)
 {
 	int	i;
-	int	j;
+	int	is_neg;
+	int	res;
 
-	i = 0;
-	j = 0;
-	
-	int	nb_s1 = ft_long_atoi(s1);
-	int	nb_s2 = ft_long_atoi(s2);
-	if (nb_s1 == nb_s2)
+	if (*str == '\0')
 		return (0);
-	else
-		return (1);
+	i = 0;
+	while ((str[i] >= '\t' && str[i] <= '\r') || (str[i] == ' '))
+		i++;
+	is_neg = 1;
+	if (str[i] == '-')
+	{
+		is_neg = -1;
+		i++;
+	}
+	else if (str[i] == '+')
+		i++;
+	res = 0;
+	while (str[i] >= '0' && str [i] <= '9')
+		res = (res * 10) + (str[i++] - '0');
+	return (res * is_neg);
 }

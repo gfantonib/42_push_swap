@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 14:04:00 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/18 17:38:49 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:23:39 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ int	main(int ac, char **av)
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 	int		stack_size;
-
+	
+	ft_printf("MELVIN");
 	if (ac < 2)
 		return (0);
 	if (!is_correct_input(av))

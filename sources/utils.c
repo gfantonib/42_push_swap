@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 13:40:24 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/18 17:39:20 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:26:48 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	exit_error(t_stack **stack_a, t_stack **stack_b)
 	exit (1);
 }
 
-long int	ft_atoi(const char *str)
+long int	ft_long_atoi(const char *str)
 {
 	long int	nb;
 	int			isneg;

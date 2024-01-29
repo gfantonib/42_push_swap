@@ -1,6 +1,9 @@
 NAME = push_swap
 
-CFLAGS	= -Wextra -Wall -Werror -g
+LIBFT = libft/libft.a
+LIBFT_PATH = libft/
+
+CFLAGS	= -Wextra -Wall -Werror
 
 HEADERS	= -I ./includes/
 
@@ -31,14 +34,17 @@ OBJECTS_PATH = objects
 
 OBJS = $(addprefix $(OBJECTS_PATH)/, $(SRCS:%.c=%.o))
 
-all: $(NAME)
+all: $(LIBFT) $(NAME)
+
+$(LIBFT):
+	make -C $(LIBFT_PATH)
 
 $(OBJECTS_PATH)/%.o: $(SOURCE_PATH)%.c
 	$(MK) $(@D)
 	$(CC) $(CFLAGS) -o $@ -c $< $(HEADERS) 
 
 $(NAME): $(OBJS)
-	$(CC) $(OBJS) $(HEADERS) -o $(NAME)
+	$(CC) $(OBJS) $(LIBFT) $(HEADERS) -o $(NAME)
 
 clean:
 	rm -rf $(OBJECTS_PATH) 
