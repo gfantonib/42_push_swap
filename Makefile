@@ -48,9 +48,11 @@ $(NAME): $(OBJS)
 
 clean:
 	rm -rf $(OBJECTS_PATH) 
+	make clean -C $(LIBFT_PATH)
 
 fclean: clean
 	rm -rf $(NAME)
+	make fclean -C $(LIBFT_PATH)
 
 re: fclean all
 

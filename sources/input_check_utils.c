@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 13:25:28 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/29 11:27:07 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/29 11:47:02 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,15 @@ int	is_sign(char c)
 
 int	nbstr_cmp(const char *s1, const char *s2)
 {
+	int	nb_s1;
+	int	nb_s2;
 	int	i;
 	int	j;
 
 	i = 0;
 	j = 0;
-	
-	int	nb_s1 = ft_long_atoi(s1);
-	int	nb_s2 = ft_long_atoi(s2);
+	nb_s1 = ft_long_atoi(s1);
+	nb_s2 = ft_long_atoi(s2);
 	if (nb_s1 == nb_s2)
 		return (0);
 	else
