@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:17:51 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/01/29 10:44:07 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/29 13:00:49 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 typedef struct s_bst
 {
 	int				key;
+	int				index;
 	struct s_bst	*left_child;
 	struct s_bst	*right_child;
 }		t_bst;

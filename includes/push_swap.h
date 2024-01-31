@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 13:47:42 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/29 11:25:44 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/30 15:34:17 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,10 @@ int			is_correct_input(char **av);
 int			is_digit(char c);
 int			is_sign(char c);
 int			nbstr_cmp(const char *s1, const char *s2);
+
+// bst
+t_bst 		*fill_bst_values(int ac, char **av);
+void		bst_in_order_indexing(t_bst *bst);
+void	bst_in_order_idx(t_bst *node);
 
 #endif

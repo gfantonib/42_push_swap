@@ -3,7 +3,7 @@ NAME = push_swap
 LIBFT = libft/libft.a
 LIBFT_PATH = libft/
 
-CFLAGS	= -Wextra -Wall -Werror
+CFLAGS	= -Wextra -Wall -Werror -g3
 
 HEADERS	= -I ./includes/
 
@@ -28,7 +28,8 @@ SRCS	= \
 			sort.c \
 			stack.c \
 			swap.c \
-			utils.c
+			utils.c \
+			bst.c \
 
 OBJECTS_PATH = objects
 

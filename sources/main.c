@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 14:04:00 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/01/29 11:23:39 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/01/30 15:36:55 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ int	main(int ac, char **av)
 	t_stack	*stack_b;
 	int		stack_size;
 	
-	ft_printf("MELVIN");
 	if (ac < 2)
 		return (0);
 	if (!is_correct_input(av))
@@ -47,6 +46,15 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	stack_a = fill_stack_values(ac, av);
 	stack_size = get_stack_size(stack_a);
+
+	t_bst	*bst;
+	bst = fill_bst_values(ac, av);
+	bst_in_order(bst);
+	ft_printf("\n");
+	bst_in_order_indexing(bst);
+	ft_printf("\n");
+	// bst_in_order_idx(bst);
+	
 	assign_index(stack_a, stack_size + 1);
 	push_swap(&stack_a, &stack_b, stack_size);
 	free_stack(&stack_a);
